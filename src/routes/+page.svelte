@@ -1,12 +1,9 @@
 <script>
+  import AnimalCard from '../lib/components/AnimalCard.svelte'
   import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
 </script>
 
 <style lang="scss">
-  .scrollable {
-    scroll-snap-align: start;
-  }
-
   section {
     height: 100vh;
   }
@@ -39,25 +36,41 @@
     margin-top: -32px;
     color: rgba($gray-600, .8);
   }
+
+  .card-list {
+    background: $background;
+    margin: 4.5rem 0 0 0;
+    gap: 12px;
+    padding-top: 24px;
+    height: calc(100vh - 18rem);
+    border-radius: 12px;
+    overflow-y: scroll;
+  }
 </style>
 
-<div class="scrollable">
-  <section class="d-flex align-items-center">
-    <div>
-      <h1 class="col-4 display-2 fw-semibold">Explore the biodiversity in WildInfo</h1>
-      <p class="col-6 fs-3">Discover detailed information and admire stunning photographs of wildlife. Immerse yourself in a world of natural wonders.</p>
-    </div>
-    <div class="scroll-tip">
-      <!-- svelte-ignore a11y-img-redundant-alt -->
-      <!-- <div>
-        <p class="fw-semibold">Haz scroll hacia abajo</p>
-        <img src={ChevronDown} alt="scroll image">
-      </div> -->
-    </div>
-  </section>
-</div>
-<div class="scrollable">
-  <section class="d-flex justify-content-center align-items-center">
-    <p style="font-size:6rem;">👌</p>
-  </section>
-</div>
+<section class="d-flex align-items-center">
+  <div>
+    <h1 class="col-4 display-2 fw-semibold">Explore the biodiversity in WildInfo</h1>
+    <p class="col-6 fs-3">Discover detailed information and admire stunning photographs of wildlife. Immerse yourself in a world of natural wonders.</p>
+  </div>
+  <div class="scroll-tip">
+    <!-- svelte-ignore a11y-img-redundant-alt -->
+    <!-- <div>
+      <p class="fw-semibold">Haz scroll hacia abajo</p>
+      <img src={ChevronDown} alt="scroll image">
+    </div> -->
+  </div>
+</section>
+<section class="d-flex align-items-center">
+  <div class="card-list col-12 d-flex flex-wrap justify-content-center">
+    <!-- <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard />
+    <AnimalCard /> -->
+  </div>
+</section>
