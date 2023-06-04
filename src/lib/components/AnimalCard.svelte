@@ -1,5 +1,7 @@
 <script>
   import Animal from '$lib/mocks/animal.json'
+
+  const animalUrl = `$lib/assets/images/animals/${Animal.image}`
 </script>
 
 <style lang="scss">
@@ -12,8 +14,7 @@
     height: 270px;
     width: 400px;
     border-radius: 6px;
-    background: rgba(green, .5);
-    // background: url(); <-- imagen del animal
+    // background: url({animalUrl});
   }
 
   .animal-card::after {
@@ -44,6 +45,8 @@
 <div class="animal-card">
   <div class="animal-info">
     <h4 class="fw-bold">{Animal.nameAnimal}</h4>
+    <!-- <img src={animalUrl} alt="zorro" srcset=""> -->
+    <img src="$lib/assets/images/animals/caiman.jpg" alt="zorro" srcset="">
     <!-- <p>Lorem ipsum dolor sit amet consectetur</p> -->
   </div>
 </div>

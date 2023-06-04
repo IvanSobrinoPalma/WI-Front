@@ -63,7 +63,6 @@
 </section>
 <section class="d-flex align-items-center">
   <div class="card-list col-12 d-flex flex-wrap justify-content-center">
-    <!-- <AnimalCard />
     <AnimalCard />
     <AnimalCard />
     <AnimalCard />
@@ -71,6 +70,7 @@
     <AnimalCard />
     <AnimalCard />
     <AnimalCard />
-    <AnimalCard /> -->
+    <AnimalCard />
+    <AnimalCard />
   </div>
 </section>
