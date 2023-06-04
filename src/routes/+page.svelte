@@ -41,7 +41,6 @@
   }
 </style>
 
-<!-- <svelte:document on:scroll={} /> -->
 <div class="scrollable">
   <section class="d-flex align-items-center">
     <div>
@@ -49,11 +48,11 @@
       <p class="col-6 fs-3">Discover detailed information and admire stunning photographs of wildlife. Immerse yourself in a world of natural wonders.</p>
     </div>
     <div class="scroll-tip">
-      <div>
+      <!-- svelte-ignore a11y-img-redundant-alt -->
+      <!-- <div>
         <p class="fw-semibold">Haz scroll hacia abajo</p>
-        <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src={ChevronDown} alt="scroll image">
-      </div>
+      </div> -->
     </div>
   </section>
 </div>

@@ -7,7 +7,7 @@
 <style>
 	.container-scroll {
 		position: relative;
-		scroll-snap-type: y mandatory;
+		scroll-snap-type: y proximity;
 		overflow-y: auto;
 		height: 100vh;
 		width: 100%;
