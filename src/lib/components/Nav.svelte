@@ -3,7 +3,7 @@
   import search_img from '$lib/assets/images/search.png'
 </script>
 
-<nav class="d-flex my-4 justify-content-between align-items-center">
+<nav class="position-fixed col-12 start -0 d-flex my-4 justify-content-between align-items-center">
   <div class="d-flex gap-3 align-items-center">
     <img class="nav__logo" src={logo128} alt="WildInfo Logo">
     <h1 class="nav__title m-0">WildInfo</h1>
@@ -21,6 +21,10 @@
 </nav>
 
 <style lang="scss">
+  nav {
+    max-width: 1320px;
+  }
+
 	.nav__logo {
     width: 96px;
   }

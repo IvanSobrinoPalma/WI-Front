@@ -20,27 +20,39 @@ $primarys: (
   "900": $primary-900
 );
 
-$secondary-100: #ffff8f;
-$secondary-200: #ffef6e;
-$secondary-300: #ffb854;
-$secondary-400: #ff8e41;
-$secondary-500: #c96d32;
-$secondary-600: #8d4c23;
-$secondary-700: #623518;
-$secondary-800: #452511;
-$secondary-900: #301a0c;
+$accent-100: #ffff8f;
+$accent-200: #ffef6e;
+$accent-300: #ffb854;
+$accent-400: #ff8e41;
+$accent-500: #c96d32;
+$accent-600: #8d4c23;
+$accent-700: #623518;
+$accent-800: #452511;
+$accent-900: #301a0c;
 
-$secondarys: (
-  "100": $secondary-100,
-  "200": $secondary-200,
-  "300": $secondary-300,
-  "400": $secondary-400,
-  "500": $secondary-500,
-  "600": $secondary-600,
-  "700": $secondary-700,
-  "800": $secondary-800,
-  "900": $secondary-900
+$accents: (
+  "100": $accent-100,
+  "200": $accent-200,
+  "300": $accent-300,
+  "400": $accent-400,
+  "500": $accent-500,
+  "600": $accent-600,
+  "700": $accent-700,
+  "800": $accent-800,
+  "900": $accent-900
 );
 
 $primary: $primary-500;
 $background: rgba(#212529, .8);
+
+* h1,p {
+  color: white;
+}
+
+// .btn {
+//   color: red;
+// }
+
+// .btn-secondary {
+//   background-color: $gray;
+// }

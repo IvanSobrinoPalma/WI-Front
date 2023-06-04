@@ -22,15 +22,15 @@
     <div class="p-900"></div>
   </section>
   <section class="d-flex flex-wrap">
-    <div class="s-100"></div>
-    <div class="s-200"></div>
-    <div class="s-300"></div>
-    <div class="s-400"></div>
-    <div class="s-500"></div>
-    <div class="s-600"></div>
-    <div class="s-700"></div>
-    <div class="s-800"></div>
-    <div class="s-900"></div>
+    <div class="a-100"></div>
+    <div class="a-200"></div>
+    <div class="a-300"></div>
+    <div class="a-400"></div>
+    <div class="a-500"></div>
+    <div class="a-600"></div>
+    <div class="a-700"></div>
+    <div class="a-800"></div>
+    <div class="a-900"></div>
   </section>
 </main>
 
@@ -43,16 +43,12 @@
     .p-#{$color} { background-color: $value; }
   }
 
-  @each $color, $value in $secondarys {
-    .s-#{$color} { background-color: $value; }
+  @each $color, $value in $accents {
+    .a-#{$color} { background-color: $value; }
   }
 
   div {
     width: 120px;
     height: 120px;
-  }
-
-  .p {
-    background-color: $primary;
   }
 </style>
