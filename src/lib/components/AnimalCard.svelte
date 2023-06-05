@@ -86,5 +86,3 @@
     <!-- Peligro de Extinción -->
   </div>
 </Modal>
-
-<!-- Los estilos del Modal hay que cambiarlos dentro del componente -->

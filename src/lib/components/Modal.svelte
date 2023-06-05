@@ -1,4 +1,5 @@
 <script>
+	
 	export let showModal; // boolean
 
 	let dialog; // HTMLDialogElement
@@ -13,12 +14,18 @@
 	on:click|self={() => dialog.close()}
 >
 	<div on:click|stopPropagation>
-		<slot name="header" />
-		<hr />
-		<slot />
-		<hr />
-		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
+		<!-- <div class="modal-content">
+			<div class="card" style="width: 18rem;">
+			  <img src="{animalUrl}" class="card-img-top" alt="Zorro Rojo">
+			  <div class="card-body">
+				<h5 class="card-title">"Nombre: {animal.name}""</h5>
+				<p class="card-text">"Scientific Name: {animal.scientificName}"</p>
+				<p class="card-text">"Peligro: {animal.dangerousness}"</p>
+				<p class="card-text">"Peligro de extinción: {animal.dangerOfExtinction}"</p>
+				<button autofocus on:click={() => dialog.close()}>Cerrar</button>
+			  </div>
+			</div>
+		</div> -->
 	</div>
 </dialog>
 
