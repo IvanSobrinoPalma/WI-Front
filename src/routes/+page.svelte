@@ -1,5 +1,6 @@
 <script>
   import AnimalCard from '../lib/components/AnimalCard.svelte'
+
   import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
 </script>
 
@@ -45,6 +46,11 @@
     height: calc(100vh - 18rem);
     border-radius: 12px;
     overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  .card-list::-webkit-scrollbar {
+    display: none;
   }
 </style>
 

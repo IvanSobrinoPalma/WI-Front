@@ -1,7 +1,7 @@
 <script>
   import Animal from '$lib/mocks/animal.json'
 
-  const animalUrl = `$lib/assets/images/animals/${Animal.image}`
+  const animalUrl = `src/lib/assets/images/animals/${Animal.image}`
 </script>
 
 <style lang="scss">
@@ -14,7 +14,13 @@
     height: 270px;
     width: 400px;
     border-radius: 6px;
-    // background: url({animalUrl});
+    transition: .2s ease-in-out;
+  }
+
+  .animal-card:hover {
+    transform: scale(1.02);
+    z-index: 4;
+    cursor: pointer;
   }
 
   .animal-card::after {
@@ -42,11 +48,14 @@
   }
 </style>
 
-<div class="animal-card">
+<div class="animal-card" 
+     style="
+      background: url({animalUrl});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+">
   <div class="animal-info">
     <h4 class="fw-bold">{Animal.nameAnimal}</h4>
-    <!-- <img src={animalUrl} alt="zorro" srcset=""> -->
-    <img src="$lib/assets/images/animals/caiman.jpg" alt="zorro" srcset="">
-    <!-- <p>Lorem ipsum dolor sit amet consectetur</p> -->
   </div>
 </div>
