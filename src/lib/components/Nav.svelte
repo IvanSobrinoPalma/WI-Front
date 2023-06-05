@@ -43,7 +43,7 @@
 
 <style lang="scss">
   nav {
-    max-width: 1320px;
+    max-width: calc(1320px - 24px);
   }
 
 	.nav__logo {
