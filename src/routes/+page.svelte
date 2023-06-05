@@ -77,14 +77,6 @@
         {/if}
       {/each}
       <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
-      <AnimalCard class="" animal={animal} />
     </ul>
   </div>
 </section>

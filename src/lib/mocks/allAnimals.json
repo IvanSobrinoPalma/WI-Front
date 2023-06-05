@@ -1,16 +1,5 @@
 [
     {
-      "idAnimal": "db654c12-a769-4eb3-9b0e-0b51cddcd367",
-      "numId": 41,
-      "nameAnimal": "Zorro Rojo",
-      "scientificName": "Vulpes vulpes",
-      "dangerousness": 3,
-      "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
-      "dangerOfExtinction": false,
-      "image": "zorro_rojo.jpg",
-      "typeAnimalNavigation": null
-    },
-    {
       "idAnimal": "d3a6c91e-11a5-4d23-a6d2-0b7f41ce285f",
       "numId": 20,
       "nameAnimal": "Escorpión",
@@ -40,7 +29,7 @@
       "dangerousness": 2,
       "typeAnimal": "f1b9e4e4-3f38-493a-913b-8242c44fb96a",
       "dangerOfExtinction": false,
-      "image": null,
+      "image": "tucan.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -62,7 +51,7 @@
       "dangerousness": 3,
       "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
       "dangerOfExtinction": false,
-      "image": null,
+      "image": "dingo.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -95,7 +84,7 @@
       "dangerousness": 1,
       "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
       "dangerOfExtinction": false,
-      "image": null,
+      "image": "suricata.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -117,7 +106,7 @@
       "dangerousness": 4,
       "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
       "dangerOfExtinction": true,
-      "image": null,
+      "image": "gorilla.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -183,7 +172,7 @@
       "dangerousness": 5,
       "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
       "dangerOfExtinction": true,
-      "image": null,
+      "image": "guepardo.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -200,12 +189,12 @@
     {
       "idAnimal": "7c794a2b-3580-4da6-91b3-68a7c6c2c956",
       "numId": 26,
-      "nameAnimal": "Halcón",
+      "nameAnimal": "Halcón peregrino",
       "scientificName": "Falco peregrinus",
       "dangerousness": 2,
       "typeAnimal": "f1b9e4e4-3f38-493a-913b-8242c44fb96a",
       "dangerOfExtinction": false,
-      "image": null,
+      "image": "halcon_peregrino.jpg",
       "typeAnimalNavigation": null
     },
     {
@@ -249,7 +238,7 @@
       "dangerousness": 4,
       "typeAnimal": "99f95add-faea-4d19-8500-021cbf1a52a0",
       "dangerOfExtinction": false,
-      "image": null,
+      "image": "narval.jpg",
       "typeAnimalNavigation": null
     },
     {
