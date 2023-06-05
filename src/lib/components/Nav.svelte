@@ -5,25 +5,21 @@
 
 <nav class="navbar navbar-expand-md bg-body-tertiary">
   <div class="container-fluid gap-3 align-items-center">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">WildInfo</a>
-    <!-- <div class="navbar-collapse">
+    <div class="navbar-collapse">
       <img class="nav__logo" src={logo128} alt="WildInfo Logo">
       <h1 class="nav__title m-0">WildInfo</h1>
-    </div> -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="d-flex gap-1" role="search">
+    </div>
+    <div class="collapse navbar-collapse gap-2" id="navbarSupportedContent">
+      <form class="d-flex" role="search">
         <input class="form-control form-control-lg me-2" type="text" placeholder="Busca un animal...">
         <button class="btn btn-primary" type="submit">
           <img src={search_img} alt="">
         </button>
       </form>
-    </div>
-    <div class="d-flex gap-3">
-      <button class="btn btn-lg btn-secondary">Acceder</button>
-      <button class="btn btn-lg btn-primary">Registrarse</button>
+      <div class="d-flex gap-3 align-items-center">
+        <button class="btn btn-lg btn-secondary">Acceder</button>
+        <button class="btn btn-lg btn-primary">Registrarse</button>
+      </div>
     </div>
   </div>
 </nav>
