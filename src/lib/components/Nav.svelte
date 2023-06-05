@@ -1,56 +1,49 @@
 <script>
   import logo128 from '$lib/assets/images/logo128.png'
   import search_img from '$lib/assets/images/search.png'
+
+  let isMobile = true;
+
+  function toggleMobileNav() {
+    isMobile = !isMobile;
+  }
 </script>
 
-<nav class="navbar navbar-expand-md bg-body-tertiary">
-  <div class="container-fluid gap-3 align-items-center">
-    <div class="navbar-collapse">
-      <img class="nav__logo" src={logo128} alt="WildInfo Logo">
-      <h1 class="nav__title m-0">WildInfo</h1>
-    </div>
-    <div class="collapse navbar-collapse gap-2" id="navbarSupportedContent">
-      <form class="d-flex" role="search">
-        <input class="form-control form-control-lg me-2" type="text" placeholder="Busca un animal...">
-        <button class="btn btn-primary" type="submit">
-          <img src={search_img} alt="">
-        </button>
-      </form>
-      <div class="d-flex gap-3 align-items-center">
-        <button class="btn btn-lg btn-secondary">Acceder</button>
-        <button class="btn btn-lg btn-primary">Registrarse</button>
+<nav class="navbar navbar-expand-md fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src={logo128} alt="WildInfo Logo">
+      <span class="nav__title" style="color: white;">WildInfo</span>
+    </a>
+    <button class="navbar-toggler bg-primary" type="button" on:formchange={toggleMobileNav}>
+      <span class="navbar-toggler-icon bg-primary"></span>
+    </button>
+    {#if isMobile}
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item">
+            <form class="d-flex gap-1">
+              <input class="form-control form-control-lg" type="text" placeholder="Busca un animal...">
+              <button style="width: 48px;" class="btn btn-primary" type="submit">
+                <img src={search_img} alt="">
+              </button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-lg btn-secondary">Acceder</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-lg btn-primary">Registrarse</button>
+          </li>
+        </ul>
       </div>
-    </div>
+    {/if}
   </div>
 </nav>
 
-<!-- <nav class="position-fixed col-12 start -0 d-flex my-4 justify-content-between align-items-center navbar navbar-expand-md">
-  <div class="containerfluid d-flex gap-3 align-items-center">
-    <img class="nav__logo" src={logo128} alt="WildInfo Logo">
-    <h1 class="nav__title m-0">WildInfo</h1>
-  </div>
-  <form class="d-flex gap-1">
-    <input class="form-control form-control-lg" type="text" placeholder="Busca un animal...">
-    <button style="width: 48px; " class="btn btn-primary" type="submit">
-      <img src={search_img} alt="">
-    </button>
-  </form>
-  <div class="d-flex gap-3">
-    <button class="btn btn-lg btn-secondary">Acceder</button>
-    <button class="btn btn-lg btn-primary">Registrarse</button>
-  </div>
-</nav> -->
-
 <style lang="scss">
-  nav {
-    max-width: calc(1320px - 24px);
-  }
-
-	.nav__logo {
-    width: 96px;
-  }
-
   .nav__title {
     font-family: 'Pangolin';
+    margin-left: 8px;
   }
 </style>
