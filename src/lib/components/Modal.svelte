@@ -14,18 +14,19 @@
 	on:click|self={() => dialog.close()}
 >
 	<div on:click|stopPropagation>
-		<!-- <div class="modal-content">
+		<div class="modal-content">
 			<div class="card" style="width: 18rem;">
-			  <img src="{animalUrl}" class="card-img-top" alt="Zorro Rojo">
+			  <img src="WI-Front/src/lib/assets/images/animals/zorro_rojo.jpg" class="card-img-top" alt="Zorro Rojo">
 			  <div class="card-body">
-				<h5 class="card-title">"Nombre: {animal.name}""</h5>
-				<p class="card-text">"Scientific Name: {animal.scientificName}"</p>
-				<p class="card-text">"Peligro: {animal.dangerousness}"</p>
-				<p class="card-text">"Peligro de extinción: {animal.dangerOfExtinction}"</p>
+				<h5 class="card-title">"Nombre: Zorro Rojo"</h5>
+				<p class="card-text">"Scientific Name: Vulpes Vulpes"</p>
+				<p class="card-text">"Peligro: 3"</p>
+				<p class="card-text">"Peligro de extinción: No"</p>
+				<!-- svelte-ignore a11y-autofocus -->
 				<button autofocus on:click={() => dialog.close()}>Cerrar</button>
 			  </div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </dialog>
 
