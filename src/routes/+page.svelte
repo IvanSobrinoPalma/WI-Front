@@ -1,6 +1,5 @@
 <script>
   import AnimalCard from '../lib/components/AnimalCard.svelte'
-  import animal from '$lib/mocks/animal.json'
   import allAnimals from '$lib/mocks/allAnimals.json'
 
   // import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
@@ -73,7 +72,7 @@
     <ul class="d-flex flex-wrap gap-3">
       {#each allAnimals as animal}
         {#if animal.image !== null}
-          <AnimalCard animal={animal}/>
+          <AnimalCard {animal}/>
         {/if}
       {/each}
     </ul>
