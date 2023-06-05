@@ -1,11 +1,17 @@
 <script>
-  // import Animal from '$lib/mocks/animal.json'
-  export let animal
+  import Modal from "./Modal.svelte"
 
+  export let animal
+  
   const animalUrl = `src/lib/assets/images/animals/${animal.image}`
+  let showModal = false
 </script>
 
 <style lang="scss">
+  h1 {
+    color: black;
+  }
+  
   .animal-card {
     position: relative;
     display: flex;
@@ -49,8 +55,11 @@
   }
 </style>
 
-<div class="animal-card" 
-     style="
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div 
+    class="animal-card"
+    on:click={() => (showModal = true)}
+    style="
       background: url({animalUrl});
       background-size: cover;
       background-position: center;
@@ -60,3 +69,22 @@
     <h4 class="fw-bold">{animal.nameAnimal}</h4>
   </div>
 </div>
+
+<Modal bind:showModal>
+  <div slot="header">
+    <h1>{animal.nameAnimal}</h1>
+    <h4>
+      <small>
+        <em>{animal.scientificName}</em>
+      </small>
+    </h4>
+  </div>
+  <div class="modal-content">
+    <!-- Imagen -->
+    <!-- Familia -->
+    <!-- Peligrosidad -->
+    <!-- Peligro de Extinción -->
+  </div>
+</Modal>
+
+<!-- Los estilos del Modal hay que cambiarlos dentro del componente -->
