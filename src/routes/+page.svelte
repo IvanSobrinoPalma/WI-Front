@@ -76,7 +76,6 @@
           <AnimalCard animal={animal}/>
         {/if}
       {/each}
-      <AnimalCard class="" animal={animal} />
     </ul>
   </div>
 </section>
