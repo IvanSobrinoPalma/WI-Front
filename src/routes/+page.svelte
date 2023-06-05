@@ -1,7 +1,9 @@
 <script>
   import AnimalCard from '../lib/components/AnimalCard.svelte'
+  import animal from '$lib/mocks/animal.json'
+  import allAnimals from '$lib/mocks/allAnimals.json'
 
-  import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
+  // import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
 </script>
 
 <style lang="scss">
@@ -41,8 +43,7 @@
   .card-list {
     background: $background;
     margin: 4.5rem 0 0 0;
-    gap: 12px;
-    padding-top: 24px;
+    padding: 1.5rem 0;
     height: calc(100vh - 18rem);
     border-radius: 12px;
     overflow-y: scroll;
@@ -68,15 +69,22 @@
   </div>
 </section>
 <section class="d-flex align-items-center">
-  <div class="card-list col-12 d-flex flex-wrap justify-content-center">
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
-    <AnimalCard />
+  <div class="card-list col-12">
+    <ul class="d-flex flex-wrap gap-3">
+      {#each allAnimals as animal}
+        {#if animal.image !== null}
+          <AnimalCard animal={animal}/>
+        {/if}
+      {/each}
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+      <AnimalCard class="" animal={animal} />
+    </ul>
   </div>
 </section>

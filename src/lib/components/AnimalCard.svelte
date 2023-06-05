@@ -1,7 +1,8 @@
 <script>
-  import Animal from '$lib/mocks/animal.json'
+  // import Animal from '$lib/mocks/animal.json'
+  export let animal
 
-  const animalUrl = `src/lib/assets/images/animals/${Animal.image}`
+  const animalUrl = `src/lib/assets/images/animals/${animal.image}`
 </script>
 
 <style lang="scss">
@@ -56,6 +57,6 @@
       background-repeat: no-repeat;
 ">
   <div class="animal-info">
-    <h4 class="fw-bold">{Animal.nameAnimal}</h4>
+    <h4 class="fw-bold">{animal.nameAnimal}</h4>
   </div>
 </div>
