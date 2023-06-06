@@ -23,6 +23,7 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
+<<<<<<< HEAD
   >
 	  <div on:click|stopPropagation class="modal-content bg-dark">
 		<div class="card border-dark">
@@ -49,6 +50,25 @@
 		</div>
 	  </div>
   </dialog>
+=======
+>
+	<div on:click|stopPropagation>
+		<div class="modal-content">
+			<div class="card" style="width: 18rem;">
+			  <img src="WI-Front/src/lib/assets/images/animals/zorro_rojo.jpg" class="card-img-top" alt="Zorro Rojo">
+			  <div class="card-body">
+				<h5 class="card-title">"Nombre: Zorro Rojo"</h5>
+				<p class="card-text">"Scientific Name: Vulpes Vulpes"</p>
+				<p class="card-text">"Peligro: 3"</p>
+				<p class="card-text">"Peligro de extinción: No"</p>
+				<!-- svelte-ignore a11y-autofocus -->
+				<button autofocus on:click={() => dialog.close()}>Cerrar</button>
+			  </div>
+			</div>
+		</div>
+	</div>
+</dialog>
+>>>>>>> d52b19bbb62ac9dd8cb25b8ae2840f01aed26cce
 
 <style>
 	dialog {
