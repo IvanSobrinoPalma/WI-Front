@@ -1,7 +1,6 @@
 <script>
 	export let showModal; // boolean
 	let dialog; // HTMLDialogElement
-	import cerrar from "$lib/assets/images/borrar.png"
 	
 	let animal = {
 	  idAnimal: "db654c12-a769-4eb3-9b0e-0b51cddcd367",
@@ -10,10 +9,34 @@
 	  scientificName: "Vulpes vulpes",
 	  dangerousness: 3,
 	  typeAnimal: "99f95add-faea-4d19-8500-021cbf1a52a0",
-	  dangerOfExtinction: false,
+	  dangerOfExtinction: true,
 	  image: "zorro_rojo.jpg",
 	  typeAnimalNavigation: null
 	};
+
+	let dangerEImg;
+	let dangerImg;
+
+
+	if(animal.dangerousness >= 0 && animal.dangerousness <= 2)
+	{
+		dangerImg = "src/lib/assets/images/dangerLittle.png"
+	} else {
+		dangerImg = "src/lib/assets/images/dangerStrong.png"
+	}
+
+	if(animal.dangerousness == 3)
+	{
+		dangerImg = "src/lib/assets/images/dangerMedium.png"
+	} 
+	
+
+	if(animal.dangerOfExtinction) {
+		dangerEImg = "src/lib/assets/images/dangerTrue.png"
+	} else {
+		dangerEImg = "src/lib/assets/images/dangerFalse.png"
+	}
+	
 	
 	$: if (dialog && showModal) dialog.showModal();
   </script>
@@ -29,16 +52,28 @@
 		  <img src="src\lib\assets\images\animals\{animal.image}" class="card-img-top" alt="Zorro Rojo">
 		  <ul class="list-group list-group-flush ">
 			<li class="list-group-item list-group-item-primary">
-				<h6 class="card-text">Nombre: {animal.nameAnimal}</h6>
+				<h6 class="card-text">
+					<span class="badge bg-dark">Nombre</span>
+					{animal.nameAnimal}
+				</h6>
 			</li>
 			<li class="list-group-item list-group-item-primary">
-				<h6 class="card-text">Scientific Name: {animal.scientificName}</h6>
+				<h6 class="card-text">
+					<span class="badge bg-dark">Scientific Name</span>
+					{animal.scientificName}
+				</h6>
 			</li>
 			<li class="list-group-item list-group-item-primary">
-				<h6 class="card-text">Peligro: {animal.dangerousness}</h6>
+				<h6 class="card-text">
+					<span class="badge bg-dark">Peligro</span>
+					<img src="{dangerImg}" alt="Peligro Imagen" class="icon">
+				</h6>
 			</li>
 			<li class="list-group-item list-group-item-primary">
-				<h6 class="card-text">Peligro de extinción: {animal.dangerOfExtinction}</h6>
+				<h6 class="card-text">
+					<span class="badge bg-dark">Peligro de extinción</span>
+					<img src="{dangerEImg}" class="icon" alt="Peligro de Extincion Imagen">
+				</h6>
 			</li>
 			<li class="list-group-item list-group-item-primary">
 				<button autofocus on:click={() => dialog.close()} class="btn btn-primary">
@@ -56,7 +91,12 @@
 		border-radius: 0.2em;
 		border: none;
 		padding: 0;
+		overflow-y: scroll;
+		scrollbar-width: none;
 	}
+	dialog::-webkit-scrollbar {
+    display: none;
+  }
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
 	}
@@ -88,5 +128,9 @@
 	button {
 		display: block;
 		float: right;
+	}
+
+	.icon {
+		width: 6%;
 	}
 </style>

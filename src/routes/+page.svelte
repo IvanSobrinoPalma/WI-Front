@@ -1,7 +1,6 @@
 <script>
   import AnimalCard from '../lib/components/AnimalCard.svelte'
   import allAnimals from '$lib/mocks/allAnimals.json'
-
   // import ChevronDown from '$lib/assets/images/chevron-compact-down.png'
 </script>
 
