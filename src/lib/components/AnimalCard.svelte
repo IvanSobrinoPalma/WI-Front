@@ -70,7 +70,7 @@
   </div>
 </div>
 
-<Modal bind:showModal>
+<Modal {animal} bind:showModal>
   <div slot="header">
     <h1>{animal.nameAnimal}</h1>
     <h4>

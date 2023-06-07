@@ -1,18 +1,19 @@
 <script>
 	export let showModal; // boolean
+	export let animal;
 	let dialog; // HTMLDialogElement
 	
-	let animal = {
-	  idAnimal: "db654c12-a769-4eb3-9b0e-0b51cddcd367",
-	  numId: 41,
-	  nameAnimal: "Zorro Rojo",
-	  scientificName: "Vulpes vulpes",
-	  dangerousness: 3,
-	  typeAnimal: "99f95add-faea-4d19-8500-021cbf1a52a0",
-	  dangerOfExtinction: true,
-	  image: "zorro_rojo.jpg",
-	  typeAnimalNavigation: null
-	};
+	// let animal = {
+	//   idAnimal: "db654c12-a769-4eb3-9b0e-0b51cddcd367",
+	//   numId: 41,
+	//   nameAnimal: "Zorro Rojo",
+	//   scientificName: "Vulpes vulpes",
+	//   dangerousness: 3,
+	//   typeAnimal: "99f95add-faea-4d19-8500-021cbf1a52a0",
+	//   dangerOfExtinction: true,
+	//   image: "zorro_rojo.jpg",
+	//   typeAnimalNavigation: null
+	// };
 
 	let dangerEImg;
 	let dangerImg;
