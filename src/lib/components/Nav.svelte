@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-md fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/home">
       <img src={logo128} alt="WildInfo Logo">
       <span class="nav__title" style="color: white;">WildInfo</span>
     </a>
@@ -30,10 +30,14 @@
             </form>
           </li>
           <li class="nav-item">
-            <button class="btn btn-lg btn-secondary">Acceder</button>
+            <a href="/login">
+              <button class="btn btn-lg btn-secondary">Acceder</button>
+            </a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-lg btn-primary">Registrarse</button>
+            <a href="/signup">
+              <button class="btn btn-lg btn-primary">Registrarse</button>
+            </a>
           </li>
         </ul>
       </div>
