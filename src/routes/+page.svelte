@@ -55,8 +55,8 @@
 
 <section class="d-flex align-items-center">
   <div>
-    <h1 class="col-4 display-2 fw-semibold">Explore the biodiversity in WildInfo</h1>
-    <p class="col-6 fs-3">Discover detailed information and admire stunning photographs of wildlife. Immerse yourself in a world of natural wonders.</p>
+    <h1 class="col-4 display-2 fw-semibold">Explora la biodiversidad en WildInfo</h1>
+    <p class="col-6 fs-3">Descubre información detallada y admira fotografías impresionantes de la vida salvaje. Sumérgete en un mundo de maravillas naturales.</p>
   </div>
   <div class="scroll-tip">
     <!-- svelte-ignore a11y-img-redundant-alt -->
