@@ -1,10 +1,23 @@
-<div class="background">
-  <div class="background__layer"></div>
-</div>
+<script>
+  import backgrounds from '$lib/services/backgrounds.js'
+
+  export let background = 0
+
+  switch(background) {
+    case "forest":
+      background = 0
+      break
+    case "tundra":
+      background = 1
+      break
+    case "ocean":
+      background = 2
+      break
+  }
+</script>
 
 <style lang="scss">
   .background {
-    // background-color: rgba(red, .5);
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +28,7 @@
   
   .background__layer {
     background: linear-gradient($background, $background),
-                url('$lib/assets/images/background-1.png');
+                var(--bg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,3 +36,10 @@
     height: 100vh;
   }
 </style>
+
+<div class="background">
+  <div 
+    class="background__layer"   
+    style="--bg: url({backgrounds[background]});"
+  ></div>
+</div>

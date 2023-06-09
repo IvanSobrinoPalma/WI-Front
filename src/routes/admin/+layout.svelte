@@ -2,5 +2,5 @@
   import Background from '$lib/components/Background.svelte'
 </script>
 
-<Background background="tundra" />
+<Background background="ocean" />
 <slot />
