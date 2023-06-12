@@ -5,6 +5,7 @@
   function removeToken() {
     if(localStorage.getItem("token")) {
       localStorage.removeItem("token")
+      localStorage.removeItem("email")
       window.location.href = "http://localhost:5173/"
     }
   }
@@ -24,7 +25,7 @@
   let userData = []
   let email = ""
   let password = ""
-  
+
   async function loginUser() {
     await getUsers()
     for(const user of users){
@@ -52,6 +53,7 @@
           let token = { token: data.response};
           token = JSON.stringify(token);
           localStorage.setItem('token', token);
+          localStorage.setItem('email', email);
           window.location.href = "http://localhost:5173/"
         }
     }

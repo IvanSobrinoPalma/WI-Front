@@ -34,6 +34,7 @@
 		let token = localStorage.getItem("token")
 		let tokenJson = JSON.parse(token)
 		let authorizate = ""
+
 		try {
 			const response = await fetch(`https://localhost:7192/wi/animal/deleteAnimal/${animal.idAnimal}`, {
 			method: "DELETE",
