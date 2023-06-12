@@ -3,6 +3,29 @@
   import i_key from '$lib/assets/icons/key.png'
   import i_person from '$lib/assets/icons/person.png'
   import i_vcard from '$lib/assets/icons/v-card.png'
+
+  async function addCliente(){
+    let token = localStorage.getItem("token")
+		let tokenJson = JSON.parse(token)
+		let authorizate = ""
+
+    try {
+			const response = await fetch(`https://localhost:7192/wi/user/addUser,` ,{
+			  method: "POST",
+      	headers: {
+				  Authorization: `Bearer ${tokenJson.token}`,
+        	"Content-Type": "application/json; charset=utf-8",
+				  "Connection" : "keep-alive"
+      }})
+
+			const data = await response.json();
+			authorizate = data.message;
+			console.log(authorizate);
+			location.reload()
+   		} catch (error) {
+      		console.error("Error en la comprobación:", error);
+    	}
+  }
 </script>
 
 <style lang="scss">

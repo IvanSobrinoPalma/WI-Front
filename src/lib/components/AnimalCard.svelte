@@ -1,11 +1,29 @@
 <script>
   import Modal from "./Modal.svelte"
-
   export let animal
-  
+
   const animalUrl = `src/lib/assets/images/animals/${animal.image}`
   let showModal = false
 </script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div 
+    class="animal-card"
+    on:click={() => (showModal = true)}
+    style="
+      background: url({animalUrl});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+">
+ 
+  <div class="animal-info">
+    <h4 class="fw-bold">{animal.nameAnimal}</h4>
+  </div>
+</div>
+
+<Modal {animal} bind:showModal>
+</Modal>
 
 <style lang="scss">
   h1 {
@@ -54,35 +72,3 @@
     color: $gray-400;
   }
 </style>
-
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<div 
-    class="animal-card"
-    on:click={() => (showModal = true)}
-    style="
-      background: url({animalUrl});
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-">
-  <div class="animal-info">
-    <h4 class="fw-bold">{animal.nameAnimal}</h4>
-  </div>
-</div>
-
-<Modal {animal} bind:showModal>
-  <div slot="header">
-    <h1>{animal.nameAnimal}</h1>
-    <h4>
-      <small>
-        <em>{animal.scientificName}</em>
-      </small>
-    </h4>
-  </div>
-  <div class="modal-content">
-    <!-- Imagen -->
-    <!-- Familia -->
-    <!-- Peligrosidad -->
-    <!-- Peligro de Extinción -->
-  </div>
-</Modal>
